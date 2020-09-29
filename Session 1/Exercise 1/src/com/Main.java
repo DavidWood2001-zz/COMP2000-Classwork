@@ -8,9 +8,13 @@ public class Main {
         String password = "pass";
 
         /* INSTRUCTIONS */
+        checkUserInfo(userName,password);
+    }
+
+    public static void checkUserInfo(String uName, String pWord){
         System.out.println("Checking password");
-        if (password == "pass" && userName == "bob"){
-            System.out.println("Logging in " + userName);
+        if (pWord == "pass" && uName == "bob"){
+            System.out.println("Logging in " + uName);
         }
         else {
             System.out.println("Incorrect password or user name");
