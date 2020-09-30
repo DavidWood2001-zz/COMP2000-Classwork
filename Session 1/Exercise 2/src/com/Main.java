@@ -5,34 +5,37 @@ public class Main {
     public static void main(String[] args) {
         /* DATA */
         String message = "Having fun in the sun!";
-
-        /* INSTRUCTIONS */
-        System.out.println(" **Post to Social Media App");
-
-        /* DATA */
         String photo = "Picture of me on the beach";
-
-        /* INSTRUCTIONS */
-        if (message.equals("")) {
-            System.out.println("Please enter a message");
-        } else {
-            System.out.println("Message: " + message);
-        }
-
-        /* INSTRUCTIONS */
-        if (!photo.equals("")) {
-            System.out.println("Photo: " + photo);
-        }
-
-        /* DATA */
         String tags = "#sun,#beach,#seaside";
 
-        /* INSTRUCTIONS */
+        postToSocialMedia(message, photo, tags);
+    }
+
+    public static void postToSocialMedia(String message, String photo,String tags ){
+        System.out.println(" **Post to Social Media App");
+        checkMessage(message);
+        checkPhoto(photo);
+        checkTags(tags);
+        System.out.println("Posting to Social Media");
+    }
+
+    public static void checkMessage(String msg){
+        if (msg.equals("")) {
+            System.out.println("Please enter a message");
+        } else {
+            System.out.println("Message: " + msg);
+        }
+    }
+
+    public static void checkPhoto(String img){
+        if (!img.equals("")) {
+            System.out.println("Photo: " + img);
+        }
+    }
+
+    public static void checkTags(String tags){
         if (!tags.equals("")) {
             System.out.println("Tags: " + tags);
         }
-
-        /* INSTRUCTIONS */
-        System.out.println("Posting to Social Media");
     }
 }
